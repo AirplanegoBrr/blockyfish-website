@@ -90,7 +90,7 @@ button {
     text-align: center;
     box-sizing: border-box;
     outline: 0;
-    transition: .2s all;
+    transition: .1s all, .3s background;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
