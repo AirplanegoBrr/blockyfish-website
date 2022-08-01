@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Blockyfish Client</title>
+    <meta content="Blockfish Culent" property="og:title" />
+    <meta content="Just a desktop client for deeeep.io" property="og:description" />
+    <meta property="og:site_name" content="It*s ⫷Ꮆяᗩиᕲ💠ᑭî⫸" />
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scroll-promt.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+</head>
+<body>
+    <div id="body">
+        <div id="top">
+            <div id="header">
+                <img src="assets/icon.png" class="icon">
+                <div class="spacer"></div>
+                <h1>
+                    Blockyfish Client
+                </h1>
+            </div>
+            <div id="desc">
+                <p class="text-center">
+                    Just a nice little client for deeeep.io with some cool extra features
+                </p>
+            </div>
+            <button>
+                Download
+            </button>
+            <div class="prompt">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40.05px" height="35.69px" viewBox="-8.369 -3.009 40.05 35.69" enable-background="new -8.369 -3.009 40.05 35.69" xml:space="preserve" class="svg-scroll">
+                  <g>
+                      <path d="M12.406,32.394l7.6-7.601l0,0l11.301-11.2c0.5-0.5,0.5-1.199,0-1.699l-2.301-2.301c-0.5-0.5-1.199-0.5-1.699,0l-14.9,14.9
+                      c-0.5,0.5-1.2,0.5-1.701,0l-14.8-14.9c-0.5-0.5-1.2-0.5-1.7,0l-2.199,2.2c-0.5,0.5-0.5,1.2,0,1.7l11.199,11.2l0,0l7.601,7.6
+                      C11.206,32.793,12.006,32.793,12.406,32.394"/>
+                    <path d="M12.031,8.565l3.795-3.795l0,0l5.643-5.593c0.25-0.25,0.25-0.599,0-0.849L20.32-2.821c-0.25-0.25-0.599-0.25-0.849,0
+                      L12.031,4.62c-0.25,0.25-0.599,0.25-0.849,0L3.791-2.821c-0.25-0.25-0.599-0.25-0.849,0L1.844-1.723c-0.25,0.25-0.25,0.6,0,0.849
+                      L7.436,4.72l0,0l3.795,3.795C11.431,8.764,11.831,8.764,12.031,8.565"/>
+                  </g>
+                </svg>
+            </div>
+        </div>
+        <div id="main">
+            <div id="container">
+                <div class="row">
+                    <div>
+                        <h2 class="list-head">Main features</h2>
+                        <ul>
+                            <li>Borderless window</li>
+                            <li>Detailed rich presence for Discord</li>
+                            <li>Adblocker</li>
+                            <li>Taskbar notification badges for forum notifications</li>
+                            <li>Built-in evulution tree</li>
+                            <li>Exit confirmation dialog</li>
+                            <li>Esc key can pause and unpause the game</li>
+                        </ul>
+                    </div>
+                    <div class="spacer"></div>
+                    <div>
+                        <h2 class="list-head">Planned features</h2>
+                        <ul>
+                            <li>Auto-fill name</li>
+                            <li>Fullscreen mode implementation</li>
+                            <li>Desktop notifications for forum replies</li>
+                            <li>Togglable adblocker</li>
+                            <li>Doctorpus assets</li>
+                            <li>Account switcher</li>
+                            <li>Custom themes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var b = document.getElementById('body')
+        window.addEventListener("scroll", (event) => {
+            let scroll = this.scrollY;
+            b.style.setProperty('--opacity', 0.3 + scroll/800)
+        });
+    </script>
+</body>

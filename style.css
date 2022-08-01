@@ -1,0 +1,118 @@
+body {
+    font-family: 'Quicksand';
+    background-image: url('assets/dpbg6.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+    background-attachment: fixed;
+    margin: 0px;
+    color: #fff;
+}
+p {
+    font-size: large;
+}
+li {
+    font-size: large;
+}
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+}
+#top {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.icon {
+    width: 25px;
+    height: 25px;
+}
+.text-center {
+    text-align: center;
+}
+h1 {
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    font-size: xx-large;
+}
+hr {
+    border: #fffa solid 1px;
+}
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    text-align: left;
+    padding: 30px;
+}
+.spacer {
+    width: 10px;
+    height: 10px;
+}
+#container {
+    max-width: 1400px;
+}
+#body {
+    --opacity: 0;
+    backdrop-filter: blur(15px);
+    background: rgba(31, 41, 55, var(--opacity));
+}
+button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    height: 48px;
+    width: fit-content;
+    white-space: nowrap;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    outline: 0;
+    transition: .2s all;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    min-height: 2.5rem;
+    border-radius: 0.25rem;
+    padding: 0.75rem 1.25rem;
+    font-size: .875rem;
+    margin: 0px auto;
+    background-color: rgb(59,130,246);
+    border-color: rgb(37,99,235);
+    color: #fff;
+    border-width: 0;
+    border-bottom-width: 4px;
+    border-radius: 20px;
+    font-family: 'Quicksand';
+
+}
+button:hover {
+    background-color: rgb(37,99,235);
+    border-color: rgb(29,78,216);
+}
+button:active {
+    border-bottom: none;
+    /* border-top: transparent 4px solid; */
+    height: 44px;
+    margin-top: 4px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.list-head {
+    padding-left: 20px;
+}
+.prompt {
+    position: relative;
+    bottom: -35%;
+}

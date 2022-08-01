@@ -1,0 +1,66 @@
+*,
+*:before,
+*:after { box-sizing: border-box; }
+
+svg {
+  fill: currentColor;
+}
+
+.prompt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+.svg-scroll {
+  color: #fff;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+  
+.svg-scroll path {
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+    
+.svg-scroll path:first-child {
+    animation-name: scrollAnimationBig;
+}
+    
+.svg-scroll path:last-child {
+    animation-name: scrollAnimationSmall;
+}
+
+@keyframes scrollAnimationSmall {
+  0% {
+    transform: translateY(-15px);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  75% {
+    opacity: .8;
+  }
+  
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollAnimationBig {
+  0% {
+    transform: translateY(-25px);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  100% {
+    
+  }
+}
