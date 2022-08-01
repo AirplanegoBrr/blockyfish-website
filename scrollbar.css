@@ -6,6 +6,9 @@
 }
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar:hover {
   width: 10px;
 }
 *::-webkit-scrollbar-track {
