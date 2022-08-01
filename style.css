@@ -108,7 +108,13 @@ button:active {
 }
 .row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+@media screen and (min-width: 820px) {
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
 }
 .list-head {
     padding-left: 20px;
