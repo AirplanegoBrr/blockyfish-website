@@ -79,7 +79,13 @@
         var b = document.getElementById('body')
         window.addEventListener("scroll", (event) => {
             let scroll = this.scrollY;
-            b.style.setProperty('--opacity', 0.3 + scroll/800)
+            if (scroll > 600) {
+                var pos = 600
+            }
+            else {
+                var pos = scroll
+            }
+            b.style.setProperty('--opacity', pos/800)
         });
     </script>
 </body>

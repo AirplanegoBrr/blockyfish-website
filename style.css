@@ -58,9 +58,10 @@ hr {
     max-width: 1400px;
 }
 #body {
-    --opacity: 0;
+    --opacity: 0.3;
     backdrop-filter: blur(15px);
     background: rgba(31, 41, 55, var(--opacity));
+    transition: all;
 }
 button {
     display: inline-flex;
