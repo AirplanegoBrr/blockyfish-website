@@ -122,4 +122,5 @@ button:active {
 .prompt {
     position: relative;
     bottom: -35%;
+    transition: 1s all;
 }
