@@ -15,10 +15,6 @@ window.addEventListener("scroll", (event) => {
 });
 
 //download button without using href
-// async function getLatestFile() {
-//     let e = await (await (fetch('https://api.github.com/repos/blockyfish-client/desktop-client/releases/latest'))).json();
-//     return e
-// }
 function download(link) {
     var element = document.createElement('a');
     element.setAttribute('href', link);
@@ -37,3 +33,11 @@ for (const download_button of download_buttons) {
         download(t.assets[0].browser_download_url)
     })
 }
+
+//download count fetcher
+async function getDownloadCount() {
+    let json_data = await (await (fetch('https://api.github.com/repos/blockyfish-client/desktop-client/releases/latest'))).json();
+    const download_count = document.getElementById('download-count')
+    download_count.innerText = json_data.assets[0].download_count + ' downloads for ' + json_data.tag_name
+}
+getDownloadCount()
