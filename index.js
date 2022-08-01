@@ -19,24 +19,21 @@ window.addEventListener("scroll", (event) => {
 //     let e = await (await (fetch('https://api.github.com/repos/blockyfish-client/desktop-client/releases/latest'))).json();
 //     return e
 // }
-function fetchFile(url) {
-    fetch(url, { mode: 'no-cors'}).then(res => res.blob()).then(file => {
-        let tempUrl = URL.createObjectURL(file);
-        const aTag = document.createElement("a");
-        aTag.href = tempUrl;
-        aTag.download = url.replace(/^.*[\\\/]/, '');
-        document.body.appendChild(aTag);
-        aTag.click();
-        URL.revokeObjectURL(tempUrl);
-        aTag.remove();
-    }).catch(() => {
-        alert("Failed to download file!");
-    });
+function download(link) {
+    var element = document.createElement('a');
+    element.setAttribute('href', link);
+  
+    element.style.display = 'none';
+    document.body.appendChild(element);
+  
+    element.click();
+  
+    document.body.removeChild(element);
 }
 const download_buttons = document.getElementsByClassName('download')
 for (const download_button of download_buttons) {
     download_button.addEventListener("click", async e => {
         let t = await (await (fetch('https://api.github.com/repos/blockyfish-client/desktop-client/releases/latest'))).json();
-        window.open(t.assets[0].browser_download_url)
+        download(t.assets[0].browser_download_url)
     })
 }
