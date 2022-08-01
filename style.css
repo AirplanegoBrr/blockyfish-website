@@ -7,6 +7,7 @@ body {
     background-attachment: fixed;
     margin: 0px;
     color: #fff;
+    overflow: overlay;
 }
 p {
     font-size: large;
@@ -14,22 +15,37 @@ p {
 li {
     font-size: large;
 }
+
 #header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     vertical-align: middle;
     align-items: center;
+}
+.icon {
+    width: 100px;
+    height: 100px;
+}
+@media screen and (min-width:600px) {
+    #header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        vertical-align: middle;
+        align-items: center;
+    }
+    .icon {
+        width: 25px;
+        height: 25px;
+    }
 }
 #top {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.icon {
-    width: 25px;
-    height: 25px;
+    margin: 0px 20px 0px 10px;
 }
 .text-center {
     text-align: center;
@@ -58,10 +74,9 @@ hr {
     max-width: 1400px;
 }
 #body {
-    --opacity: 0.3;
+    --opacity: 0.2;
     backdrop-filter: blur(15px);
     background: rgba(31, 41, 55, var(--opacity));
-    transition: all;
 }
 button {
     display: inline-flex;
