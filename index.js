@@ -37,6 +37,6 @@ const download_buttons = document.getElementsByClassName('download')
 for (const download_button of download_buttons) {
     download_button.addEventListener("click", async e => {
         let t = await (await (fetch('https://api.github.com/repos/blockyfish-client/desktop-client/releases/latest'))).json();
-        fetchFile(t.assets[0].browser_download_url)
+        window.open(t.assets[0].browser_download_url)
     })
 }
