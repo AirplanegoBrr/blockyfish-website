@@ -56,7 +56,7 @@ h1 {
     font-size: xx-large;
 }
 hr {
-    border: #fffa solid 1px;
+    border: #fff6 double 1px;
 }
 #main {
     display: flex;
@@ -71,7 +71,8 @@ hr {
     height: 10px;
 }
 #container {
-    max-width: 1400px;
+    max-width: 900px;
+    width: 80vw;
 }
 #body {
     --opacity: 0.2;
