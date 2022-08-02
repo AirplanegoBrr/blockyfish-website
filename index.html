@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="scroll-promt.css">
     <link rel="stylesheet" href="scrollbar.css">
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <link rel="stylesheet" href="image-carousel.css">
 </head>
 <body>
     <div id="body">
@@ -81,6 +82,38 @@
                 <div class="row">
                     <div id="img-gallery">
                         <h2>Image gallery</h2>
+                        <section class="img-carousel">
+                            <div class="nine columns">
+                              <div class="coverflow top10 bot10">
+                                <a class="prev-arrow"></a>
+                                <a href="assets/screenshots/1.png"><img src="assets/screenshots/1.png" class="coverflow__image" /></a>
+                                <a href="assets/screenshots/2.png"><img src="assets/screenshots/2.png" class="coverflow__image" /></a>
+                                <a href="assets/screenshots/3.png"><img src="assets/screenshots/3.png" class="coverflow__image" /></a>
+                                <a href="assets/screenshots/4.png"><img src="assets/screenshots/4.png" class="coverflow__image" /></a>
+                                <a href="assets/screenshots/5.png"><img src="assets/screenshots/5.png" class="coverflow__image" /></a>
+                                <a href="assets/screenshots/6.png"><img src="assets/screenshots/6.png" class="coverflow__image" /></a>
+                                <a href="assets/screenshots/7.png"><img src="assets/screenshots/7.png" class="coverflow__image" /></a>
+                                <a href="assets/screenshots/8.png"><img src="assets/screenshots/8.png" class="coverflow__image" /></a>
+                                <a class="next-arrow"></a>
+                              </div>
+                            </div>
+                        </section>
+                        <section class="img-grid">
+                            <div class="row-force">
+                                <div class="column">
+                                    <a href="assets/screenshots/1.png"><img src="assets/screenshots/1.png" class="img-grid" /></a>
+                                    <a href="assets/screenshots/2.png"><img src="assets/screenshots/2.png" class="img-grid" /></a>
+                                    <a href="assets/screenshots/3.png"><img src="assets/screenshots/3.png" class="img-grid" /></a>
+                                    <a href="assets/screenshots/4.png"><img src="assets/screenshots/4.png" class="img-grid" /></a>
+                                </div>
+                                <div class="column">
+                                    <a href="assets/screenshots/5.png"><img src="assets/screenshots/5.png" class="img-grid" /></a>
+                                    <a href="assets/screenshots/6.png"><img src="assets/screenshots/6.png" class="img-grid" /></a>
+                                    <a href="assets/screenshots/7.png"><img src="assets/screenshots/7.png" class="img-grid" /></a>
+                                    <a href="assets/screenshots/8.png"><img src="assets/screenshots/8.png" class="img-grid" /></a>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
                 <hr>
@@ -102,4 +135,5 @@
         </div>
     </div>
     <script src="index.js"></script>
+    <script src="image-carousel.js"></script>
 </body>

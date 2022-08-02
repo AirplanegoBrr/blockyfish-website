@@ -122,12 +122,20 @@ button:active {
     height: 44px;
     margin-top: 4px;
 }
-.row {
+div.row {
     display: flex;
     flex-direction: column;
 }
+div.column {
+    display: flex;
+    flex-direction: column;
+}
+div.row-force {
+    display: flex;
+    flex-direction: row;
+}
 @media screen and (min-width: 820px) {
-    .row {
+    div.row {
         display: flex;
         flex-direction: row;
     }
@@ -139,4 +147,25 @@ button:active {
     position: relative;
     bottom: -35%;
     transition: 1s all;
+}
+section.img-carousel {
+    display: none;
+}
+section.img-grid {
+    display: block;
+}
+@media screen and (min-width:1080px) {
+    section.img-carousel {
+        display: block;
+    }
+    section.img-grid {
+        display: none;
+    }
+}
+img.img-grid {
+    width: 35vw;
+    height: auto;
+    margin: 10px;
+    border: #fff6 solid 1px;
+    border-radius: 10px;
 }
