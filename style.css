@@ -50,6 +50,9 @@ li {
 .text-center {
     text-align: center;
 }
+.center {
+    justify-self: center;
+}
 h1 {
     margin-block-end: 0px;
     margin-block-start: 0px;
@@ -91,7 +94,7 @@ button {
     text-align: center;
     box-sizing: border-box;
     outline: 0;
-    transition: .1s all, .3s background;
+    transition: .1s all, .3s background, .5s filter;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -168,4 +171,25 @@ img.img-grid {
     margin: 10px;
     border: #fff6 solid 1px;
     border-radius: 10px;
+}
+#footer {
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(31, 41, 55);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+a.social {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s all;
+}
+a.social:hover {
+    color: #4285F4;
+}
+a.social:active {
+    color: #2563eb;
 }

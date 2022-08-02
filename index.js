@@ -27,12 +27,27 @@ function download(link) {
     document.body.removeChild(element);
 }
 const download_buttons = document.getElementsByClassName('download')
+const download_text = document.getElementById('download-text')
+function findPos(obj) {
+    var curtop = 0;
+    if (obj.offsetParent) {
+        do {
+            curtop += obj.offsetTop;
+        } while (obj = obj.offsetParent);
+    return [curtop];
+    }
+}
 for (const download_button of download_buttons) {
     download_button.addEventListener("click", async e => {
+        window.scroll({
+            top: findPos(download_text),
+            behavior: 'smooth'
+        })
         let t = await (await (fetch('https://api.github.com/repos/blockyfish-client/desktop-client/releases/latest'))).json();
         download(t.assets[0].browser_download_url)
     })
 }
+
 
 //download count fetcher
 async function getDownloadCount() {
