@@ -790,7 +790,7 @@
   .prev-arrow:focus,
   .next-arrow:focus {
     color: rgba(255, 255, 255, 0.9);
-    background: rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(#fff 0 0 5px)
   }
   
   .prev-arrow {
