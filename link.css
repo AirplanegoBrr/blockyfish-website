@@ -1,0 +1,76 @@
+a {
+  display: inline-block;
+  padding: 0px;
+  position: relative;
+  color: #84c2ff;
+  text-decoration: none;
+}
+a.transparent {
+  background-size: 100% 200%;
+}
+a.underline-left-right::before,
+a.underline-up-and-out::before,
+a.underline-up-down::before,
+a.underline-center::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;  /* 100% will cover entire background of text */
+  border-radius: 4px;
+  background-color: #84c2ff;
+  bottom: 0;
+  left: 0;  
+}
+
+a.underline-left-right {
+  position: relative;
+}
+a.underline-left-right::before {
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+a.underline-left-right:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+a.underline-up-and-out {
+  position: relative;
+}
+a.underline-up-and-out::before {
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform .5s ease-in-out;
+}
+a.underline-up-and-out:hover::before {
+  transform-origin: bottom;
+  transform: scaleY(1);
+}
+
+a.underline-up-down {
+  position: relative;
+}
+a.underline-up-down::before {
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: transform .5s ease-out;
+}
+a.underline-up-down:hover::before {
+  transform-origin: bottom;
+  transform: scaleY(1);
+}
+
+/*CUSTOM STYLE*/
+a.underline-center {
+  position: relative;
+}
+a.underline-center::before {
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform .3s ease-out;
+}
+a.underline-center:hover::before {
+  transform-origin: center;
+  transform: scaleX(1);
+}

@@ -15,19 +15,19 @@ window.addEventListener("scroll", (event) => {
 });
 
 //download button without using href
-function download(link) {
-    var element = document.createElement('a');
-    element.setAttribute('href', link);
-  
-    element.style.display = 'none';
-    document.body.appendChild(element);
-  
-    element.click();
-  
-    document.body.removeChild(element);
-}
 const download_buttons = document.getElementsByClassName('download')
 const download_text = document.getElementById('download-text')
+const pre_download = document.getElementById('pre-download')
+const post_download = document.getElementById('post-download')
+const redownload = document.getElementById('redownload-link')
+function download(link) {
+    var element = document.createElement('a')
+    element.setAttribute('href', link)
+    element.style.display = 'none'
+    document.body.appendChild(element)
+    element.click()
+    document.body.removeChild(element)
+}
 function findPos(obj) {
     var curtop = 0;
     if (obj.offsetParent) {
@@ -45,6 +45,15 @@ for (const download_button of download_buttons) {
         })
         let t = await (await (fetch('https://api.github.com/repos/blockyfish-client/desktop-client/releases/latest'))).json();
         download(t.assets[0].browser_download_url)
+        redownload.href = t.assets[0].browser_download_url 
+        pre_download.style.opacity = '0'
+        setTimeout(function() {
+            pre_download.style.display = 'none'
+            post_download.style.display = 'block'
+        }, 500)
+        setTimeout(function() {
+            post_download.style.opacity = '1'
+        }, 510)
     })
 }
 

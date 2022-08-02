@@ -193,3 +193,7 @@ a.social:hover {
 a.social:active {
     color: #2563eb;
 }
+#pre-download,
+#post-download {
+    transition: 0.5s all;
+}
