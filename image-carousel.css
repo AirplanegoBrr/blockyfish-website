@@ -41,7 +41,7 @@
 
   .coverflow__image[data-coverflow-index] {
     position: absolute;
-    left: calc(68vw/2);
+    left: calc(65vw/2);
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
   }
@@ -49,7 +49,7 @@
   @media screen and (min-width:1125px) {
     .coverflow__image[data-coverflow-index] {
       position: absolute;
-      left: 382.5px;
+      left: 364px;
       -webkit-transform-origin: 50% 50%;
       transform-origin: 50% 50%;
     }
