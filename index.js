@@ -37,10 +37,11 @@ function findPos(obj) {
     return [curtop];
     }
 }
+const download_pos = findPos(download_text)
 for (const download_button of download_buttons) {
     download_button.addEventListener("click", async e => {
         window.scroll({
-            top: findPos(download_text),
+            top: download_pos,
             behavior: 'smooth'
         })
         let t = await (await (fetch('https://api.github.com/repos/blockyfish-client/desktop-client/releases/latest'))).json();
