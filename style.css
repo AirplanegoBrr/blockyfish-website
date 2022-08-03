@@ -8,6 +8,7 @@ body {
     margin: 0px;
     color: #fff;
     overflow: overlay;
+    user-select: none;
 }
 p {
     font-size: large;
