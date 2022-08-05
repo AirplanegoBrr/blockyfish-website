@@ -177,12 +177,18 @@ section.img-grid {
         display: none;
     }
 }
+img {
+    transition: .2s all;
+}
 img.img-grid {
     width: 35vw;
     height: auto;
     margin: 10px;
     border: #fff6 solid 1px;
     border-radius: 10px;
+}
+img:hover {
+    transform: scale(1.1);
 }
 #footer {
     height: 50px;
@@ -208,4 +214,16 @@ a.social:active {
 #pre-download,
 #post-download {
     transition: 0.5s all;
+}
+.box {
+    transition: .2s ease-out all;
+    padding: 10px;
+    border-radius: 25px;
+}
+.box:hover {
+    background-color: #fff1;
+    box-shadow: 5px 5px 20px #0004;
+}
+.feature {
+    width: 50%;
 }
