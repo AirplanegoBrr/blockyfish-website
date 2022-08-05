@@ -48,15 +48,22 @@ for (const download_button of download_buttons) {
         download(t.assets[0].browser_download_url)
         redownload.href = t.assets[0].browser_download_url 
         pre_download.style.opacity = '0'
+        document.getElementById('bottom-download').style.opacity = '0'
         setTimeout(function() {
             pre_download.style.display = 'none'
-            post_download.style.display = 'block'
+            document.getElementById('bottom-download').style.display = 'none'
+            post_download.style.display = 'grid'
         }, 500)
         setTimeout(function() {
             post_download.style.opacity = '1'
         }, 510)
     })
 }
+
+//discord server button
+document.querySelector('button.discord').addEventListener("click", () => {
+    window.open('https://discord.gg/8Amw32CrGR')
+})
 
 
 //download count fetcher

@@ -106,7 +106,7 @@ button {
     text-align: center;
     box-sizing: border-box;
     outline: 0;
-    transition: .1s all, .3s background, .5s filter;
+    transition: .1s all, .3s background, .5s filter, .5s opacity;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
