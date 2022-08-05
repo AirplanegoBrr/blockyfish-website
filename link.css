@@ -67,10 +67,10 @@ a.underline-center {
 }
 a.underline-center::before {
   transform-origin: center;
-  transform: scaleX(0);
+  transform: scaleX(0) translateY(-5px);
   transition: transform .3s ease-out;
 }
 a.underline-center:hover::before {
   transform-origin: center;
-  transform: scaleX(1);
+  transform: scaleX(1) translateY(-5px);
 }

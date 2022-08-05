@@ -16,16 +16,26 @@ body {
     background-attachment: fixed;
     margin: 0px;
     color: #fff;
-    overflow: overlay;
+    overflow: hidden overlay;
     user-select: none;
 }
 p {
-    font-size: large;
-    line-height: 30px;
+    font-size: medium;
+    line-height: 25px;
 }
 li {
-    font-size: large;
-    line-height: 30px;
+    font-size: medium;
+    line-height: 25px;
+}
+@media screen and (min-width: 820px) {
+    p {
+        font-size: large;
+        line-height: 30px;
+    }
+    li {
+        font-size: large;
+        line-height: 30px;
+    }
 }
 
 #header {
@@ -224,6 +234,39 @@ a.social:active {
     background-color: #fff1;
     box-shadow: 5px 5px 20px #0004;
 }
+
 .feature {
-    width: 50%;
+    width: 100%;
+}
+@media screen and (min-width: 820px) {
+    .feature {
+        width: 50%;
+    }
+}
+
+
+
+/* MODAL POPUP */
+#modal-bg {
+    position: fixed;
+    background-color: #0007;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    backdrop-filter: blur(5px);
+    display: flex;
+    transition: 0.2s all ease-out;
+}
+#modal-box {
+    width: 80%;
+    max-width:600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #1f2937;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    border: #fff4 1px solid;
+    filter: drop-shadow(2px 4px 6px #0003);
 }

@@ -38,25 +38,34 @@ function findPos(obj) {
     }
 }
 const download_pos = findPos(download_text)
+async function startDownload() {
+    window.scroll({
+        top: download_pos,
+        behavior: 'smooth'
+    })
+    let t = await (await (fetch('https://api.github.com/repos/blockyfish-client/desktop-client/releases/latest'))).json();
+    download(t.assets[0].browser_download_url)
+    redownload.href = t.assets[0].browser_download_url 
+    pre_download.style.opacity = '0'
+    document.getElementById('bottom-download').style.opacity = '0'
+    setTimeout(function() {
+        pre_download.style.display = 'none'
+        document.getElementById('bottom-download').style.display = 'none'
+        post_download.style.display = 'grid'
+    }, 500)
+    setTimeout(function() {
+        post_download.style.opacity = '1'
+    }, 510)
+}
 for (const download_button of download_buttons) {
     download_button.addEventListener("click", async e => {
-        window.scroll({
-            top: download_pos,
-            behavior: 'smooth'
-        })
-        let t = await (await (fetch('https://api.github.com/repos/blockyfish-client/desktop-client/releases/latest'))).json();
-        download(t.assets[0].browser_download_url)
-        redownload.href = t.assets[0].browser_download_url 
-        pre_download.style.opacity = '0'
-        document.getElementById('bottom-download').style.opacity = '0'
-        setTimeout(function() {
-            pre_download.style.display = 'none'
-            document.getElementById('bottom-download').style.display = 'none'
-            post_download.style.display = 'grid'
-        }, 500)
-        setTimeout(function() {
-            post_download.style.opacity = '1'
-        }, 510)
+        if (navigator.userAgent.indexOf("NotWin")!=-1) {
+            startDownload()
+        }
+        else {
+            modal.style.opacity = '1'
+            modal.style.pointerEvents = 'all'
+        }
     })
 }
 
@@ -65,6 +74,21 @@ document.querySelector('button.discord').addEventListener("click", () => {
     window.open('https://discord.gg/8Amw32CrGR')
 })
 
+//incompat. download modal
+const modal = document.getElementById('modal-bg')
+const modal_cancel = document.getElementById('modal-cancel')
+const modal_proceed = document.getElementById('modal-proceed')
+modal.style.opacity = '0'
+modal.style.pointerEvents = 'none'
+modal_cancel.addEventListener("click", () => {
+    modal.style.opacity = '0'
+    modal.style.pointerEvents = 'none'
+})
+modal_proceed.addEventListener("click", () => {
+    modal.style.opacity = '0'
+    modal.style.pointerEvents = 'none'
+    startDownload()
+})
 
 //download count fetcher
 async function getDownloadCount() {
