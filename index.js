@@ -59,7 +59,7 @@ async function startDownload() {
 }
 for (const download_button of download_buttons) {
     download_button.addEventListener("click", async e => {
-        if (navigator.userAgent.indexOf("NotWin")!=-1) {
+        if (navigator.userAgent.indexOf("Win")!=-1) {
             startDownload()
         }
         else {
