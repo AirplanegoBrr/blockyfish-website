@@ -6,9 +6,14 @@
     url('fonts/quicksand-v22-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
     url('fonts/quicksand-v22-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+@font-face {
+    font-family: 'EmojiOne';
+    src: url('blockyfish.netlify.app/fonts/emojione-svg.woff') format('woff'),
+    url('blockyfish.netlify.app/fonts/emojione-svg.woff2') format('woff2');
+}
 
 body {
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', 'EmojiOne';
     background-image: url('assets/dpbg6.png');
     background-repeat: no-repeat;
     background-size: cover;
