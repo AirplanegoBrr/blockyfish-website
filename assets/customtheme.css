@@ -26,6 +26,7 @@ div.play-game > div.el-image {
     background: url(blockfishlogo.png);
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: bottom;
 }
 div.play-game > div.el-image > img {
     opacity: 0;
