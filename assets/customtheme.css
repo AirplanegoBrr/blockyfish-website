@@ -1,7 +1,18 @@
 .home-page .home-bg {
     background-image: url(dpbg6.png) !important;
 }
-.containter {
+.container {
     background-color: #0003 !important;
     backdrop-filter: blur(10px) !important;    
+}
+.home-widget {
+    background-color: #0003 !important;
+    backdrop-filter: blur(10px) !important;    
+}
+.top-right-nav {
+    background-color: #0003 !important;
+    backdrop-filter: blur(10px) !important;
+}
+.btn {
+    border-bottom-width: 0px !important;
 }
