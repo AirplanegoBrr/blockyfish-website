@@ -1,6 +1,19 @@
 .home-page .home-bg {
     background-image: url(dpbg6.png) !important;
 }
+.home-page.playing {
+    --tw-bg-opacity: 0.3 !important;
+    backdrop-filter: blur(10px) !important;
+    animation-duration: 0.4s !important;
+}
+.slideInDown {
+    -webkit-animation-name: fadeIn !important;
+    animation-name: fadeIn !important;
+}
+.slideOutUp {
+    -webkit-animation-name: fadeOut !important;
+    animation-name: fadeOut !important;
+}
 .p-2 .container {
     background-color: #0003 !important;
     backdrop-filter: blur(10px) !important;    
@@ -94,7 +107,7 @@
 .btn:not(.el-button--text).gray:hover {
     background-color: #4b5563 !important;
 }
-.btn:not(.el-button--text).blue:hover {
+.btn:not(.el-button--text).cyan:hover {
     background-color: #0891b2 !important;
 }
 
@@ -130,15 +143,30 @@ body .el-input__wrapper, .dark body .el-textarea__wrapper {
     color: #eee !important;
 }
 
+.tabs .tab.active {
+    background-color: #2563eb !important;
+}
 .animals-container .animals .animal {
     --tw-bg-opacity: 0.3 !important;
 }
-.store .main .tiers .tier-btn {
+.pets .pet {
+    --tw-bg-opacity: 0.3 !important;
+}
+.emotes .emote {
+    --tw-bg-opacity: 0.3 !important;
+}
+.store .main .tiers .tier-btn:not(.active) {
     --tw-bg-opacity: 0.2 !important;
 }
 .skins-container .skins .skin {
     --tw-bg-opacity: 0.3 !important;
 }
 .skin-container .skin .image {
+    background-color: #3071af66 !important;
+}
+.pet-container .pet .image {
+    background-color: #3071af66 !important;
+}
+.emote-container .emote .image {
     background-color: #3071af66 !important;
 }
