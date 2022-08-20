@@ -22,6 +22,14 @@ body {
     -webkit-animation-name: fadeOut !important;
     animation-name: fadeOut !important;
 }
+div.play-game > div.el-image {
+    background: url(blockfishlogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+div.play-game > div.el-image > img {
+    opacity: 0;
+}
 .p-2 .container {
     background-color: #0003 !important;
     /* backdrop-filter: blur(10px) !important; */
