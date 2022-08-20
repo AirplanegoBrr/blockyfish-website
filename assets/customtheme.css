@@ -1,7 +1,7 @@
 .home-page .home-bg {
     background-image: url(dpbg6.png) !important;
 }
-.container {
+.p-2 .container {
     background-color: #0003 !important;
     backdrop-filter: blur(10px) !important;    
 }
@@ -15,4 +15,82 @@
 }
 .btn {
     border-bottom-width: 0px !important;
+}
+
+/* BUTTONS */
+.btn:not(.el-button--text).blue {
+    background-color: #0004 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).red {
+    background-color: #0003 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).pink {
+    background-color: #0002 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).green {
+    background-color: #0003 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).purple {
+    background-color: #0004 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).indigo {
+    background-color: #0003 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).yellow {
+    background-color: #0002 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).orange {
+    background-color: #0002 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).black {
+    background-color: #0005 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).gray {
+    background-color: #0004 !important;
+    transition: all 0.3s;
+}
+
+/* HOVERED BUTTONS */
+.btn:not(.el-button--text).blue:hover {
+    background-color: #2563eb !important;
+}
+.btn:not(.el-button--text).red:hover {
+    background-color: #dc2626 !important;
+}
+.btn:not(.el-button--text).pink:hover {
+    background-color: #db2777 !important;
+}
+.btn:not(.el-button--text).green:hover {
+    background-color: rgba(5,150,105) !important;
+}
+.btn:not(.el-button--text).purple:hover {
+    background-color: #7c3aed !important;
+}
+.btn:not(.el-button--text).indigo:hover {
+    background-color: #4f46e5 !important;
+}
+.btn:not(.el-button--text).yellow:hover {
+    background-color: #d97706 !important;
+}
+.btn:not(.el-button--text).orange:hover {
+    background-color: #ea580c !important;
+}
+.btn:not(.el-button--text).black:hover {
+    background-color: #1f2937 !important;
+}
+.btn:not(.el-button--text).gray:hover {
+    background-color: #4b5563 !important;
+}
+
+.nice-btn-group.block {
+    backdrop-filter: blur(10px) !important;
 }
