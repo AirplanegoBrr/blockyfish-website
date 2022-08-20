@@ -58,6 +58,10 @@
     background-color: #0004 !important;
     transition: all 0.3s;
 }
+.btn:not(.el-button--text).cyan {
+    background-color: #0002 !important;
+    transition: all 0.3s;
+}
 
 /* HOVERED BUTTONS */
 .btn:not(.el-button--text).blue:hover {
@@ -90,7 +94,38 @@
 .btn:not(.el-button--text).gray:hover {
     background-color: #4b5563 !important;
 }
+.btn:not(.el-button--text).blue:hover {
+    background-color: #0891b2 !important;
+}
 
 .nice-btn-group.block {
     backdrop-filter: blur(10px) !important;
+}
+.vfm--overlay {
+    background-color: rgba(0,0,0,.2) !important;
+    backdrop-filter: blur(10px) !important;
+}
+.modal-content {
+    background-color: #1f293766 !important;
+    --tw-border-opacity: 0 !important;
+}
+.forum-page {
+    --tw-bg-opacity: 0.2 !important;
+}
+.forum-page .inner .forum-posts .forum-post-summary {
+    --tw-border-opacity: 0.3 !important;
+    transition: all 0.2s;
+}
+.forum-page .inner .forum-posts .forum-post-summary:hover {
+    --tw-bg-opacity: 0.2 !important;
+}
+
+body .el-input__wrapper, .dark body .el-textarea__wrapper {
+    --tw-bg-opacity: 0.2 !important;
+    background-color: rgba(17,24,39,var(--tw-bg-opacity)) !important;
+    color: #fff !important;
+    border-color: #fff2 !important;
+}
+.play-game .name-input .el-input__wrapper .el-input__inner {
+    color: #eee;
 }
