@@ -127,5 +127,18 @@ body .el-input__wrapper, .dark body .el-textarea__wrapper {
     border-color: #fff2 !important;
 }
 .play-game .name-input .el-input__wrapper .el-input__inner {
-    color: #eee;
+    color: #eee !important;
+}
+
+.animals-container .animals .animal {
+    --tw-bg-opacity: 0.3 !important;
+}
+.store .main .tiers .tier-btn {
+    --tw-bg-opacity: 0.2 !important;
+}
+.skins-container .skins .skin {
+    --tw-bg-opacity: 0.3 !important;
+}
+.skin-container .skin .image {
+    background-color: #3071af66 !important;
 }
