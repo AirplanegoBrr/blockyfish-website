@@ -274,3 +274,9 @@ a.social:active {
     border: #fff4 1px solid;
     filter: drop-shadow(2px 4px 6px #0003);
 }
+code {
+    background-color: #0003;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px #fff2 solid;
+}
