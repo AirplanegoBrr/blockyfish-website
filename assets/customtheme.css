@@ -204,12 +204,12 @@ body .el-input__wrapper, .dark body .el-textarea__wrapper {
     background-color: #3071af66 !important;
 }
 #app > div.overlay > div.container > div.row > div.emote-container > div.emote > div.image {
-    height: -webkit-fill-available;
-    width: -webkit-fill-available;
+    height: -webkit-fill-available !important;
+    width: -webkit-fill-available !important;
 }
 .profile .content {
-    background-color: #0001;
+    background-color: #0001 !important;
 }
 .emote-container .emote .right .actions .buy .price {
-    margin: 0px;
+    margin: 0px !important;
 }
