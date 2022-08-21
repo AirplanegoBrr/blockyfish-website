@@ -235,6 +235,6 @@ body .el-textarea__inner {
 .play-game .main-actions .modes .mode:before {
     filter: grayscale(1) blur(3px) !important;
 }
-.play-game .main-actions .modes .mode {
+.play-game .main-actions .modes .mode:not(.selected) {
     transition: all 0.3s ease-out !important;
 }
