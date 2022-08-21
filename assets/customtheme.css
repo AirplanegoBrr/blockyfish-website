@@ -214,3 +214,15 @@ body .el-input__wrapper, .dark body .el-textarea__wrapper {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
 }
+.forum-post-page .inner {
+    --tw-bg-opacity: 0.1 !important;
+}
+body .el-textarea__inner {
+    --tw-bg-opacity: 0.2 !important;
+}
+.create-comment .input {
+    --el-input-border-color: #232d3b00 !important;
+}
+.create-comment .nav-bar {
+    --tw-bg-opacity: 0.5 !important;
+}
