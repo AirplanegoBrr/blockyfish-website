@@ -210,7 +210,7 @@ body .el-input__wrapper, .dark body .el-textarea__wrapper {
 .profile .content {
     background-color: #0001 !important;
 }
-.emote-container .emote .right .actions .buy .price {
+.right .actions .buy .price {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
 }
