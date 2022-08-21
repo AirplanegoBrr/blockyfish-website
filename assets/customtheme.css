@@ -241,3 +241,26 @@ body .el-textarea__inner {
 .social-modal .content, .social-modal .sidebar--left {
     background-color: #0002 !important;
 }
+.el-slider__button {
+    background-color: #409eff !important;
+    border: none !important;
+    width: 15px !important;
+    height: 15px !important;
+}
+.el-slider__runway {
+    height: 2px !important;
+}
+.el-slider__bar {
+    height: 5px !important;
+    top: -2px !important;
+    transition: all .1s ease-out !important;
+}
+.el-slider__button-wrapper {
+    top: -17px !important;
+    transition: all .1s ease-out !important;
+}
+
+/* GAME UI */
+.meter .inner {
+    transition: all .3s ease-out !important;
+}
