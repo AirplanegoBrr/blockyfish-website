@@ -23,13 +23,27 @@ body {
     animation-name: fadeOut !important;
 }
 div.play-game > div.el-image {
-    background: url(blockfishlogo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
+    background: url(blockfishlogo.png) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: bottom !important;
 }
 div.play-game > div.el-image > img {
-    opacity: 0;
+    opacity: 0 !important;
+}
+.loading-container {
+    background-image: url(loadingbg.png) !important;
+}
+.loading-container .loading-bar .inner {
+    background-color: #000 !important;
+}
+.loading-container .loading-bar .ball {
+    background-image: url(loader.png) !important;
+    width: 0px !important;
+    padding: 32px 64px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
 }
 .p-2 .container {
     background-color: #0003 !important;
@@ -180,6 +194,10 @@ body .el-input__wrapper, .dark body .el-textarea__wrapper {
 .pet-container .pet .image {
     background-color: #3071af66 !important;
 }
-.emote-container .emote .image {
+.vfm .emote-container .emote .image {
     background-color: #3071af66 !important;
+}
+#app > div.overlay > div.container > div.row > div.emote-container > div.emote > div.image {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
 }
