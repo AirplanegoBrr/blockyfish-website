@@ -31,6 +31,12 @@ div.play-game > div.el-image {
 div.play-game > div.el-image > img {
     opacity: 0 !important;
 }
+.death-screen-container .bg {
+    background-image: url(deathbg.png);
+}
+.death-screen-container {
+    backdrop-filter: blur(5px) sepia(0.4) saturate(0.7)
+}
 .loading-container {
     background-image: url(loadingbg.png) !important;
 }
@@ -194,10 +200,19 @@ body .el-input__wrapper, .dark body .el-textarea__wrapper {
 .pet-container .pet .image {
     background-color: #3071af66 !important;
 }
-.vfm .emote-container .emote .image {
+.store .emote-container .emote .image {
     background-color: #3071af66 !important;
 }
 #app > div.overlay > div.container > div.row > div.emote-container > div.emote > div.image {
     height: -webkit-fill-available;
     width: -webkit-fill-available;
+}
+.profile .content {
+    background-color: #0001;
+}
+.emote-container .emote .right .actions .buy .price {
+    margin: 0px;
+}
+.coin img {
+    /* */
 }
