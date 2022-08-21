@@ -32,7 +32,7 @@ div.play-game > div.el-image > img {
     opacity: 0 !important;
 }
 .death-screen-container .bg {
-    background-image: url(deathbg.png);
+    background-image: url(deathbg.png) !important;
 }
 .death-screen-container {
     backdrop-filter: blur(5px) sepia(0.4) saturate(0.7)
@@ -237,4 +237,7 @@ body .el-textarea__inner {
 }
 .play-game .main-actions .modes .mode {
     transition: all 0.3s ease-out !important;
+}
+.social-modal .content, .social-modal .sidebar--left {
+    background-color: #0002 !important;
 }
