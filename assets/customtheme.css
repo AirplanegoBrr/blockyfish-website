@@ -211,5 +211,6 @@ body .el-input__wrapper, .dark body .el-textarea__wrapper {
     background-color: #0001 !important;
 }
 .emote-container .emote .right .actions .buy .price {
-    margin: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
 }
