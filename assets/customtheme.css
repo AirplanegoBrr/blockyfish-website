@@ -232,9 +232,9 @@ body .el-textarea__inner {
 .el-table__footer-wrapper, .el-table__header-wrapper {
     border-radius: 10px 10px 0px 0px !important;
 }
-.play-game .main-actions .modes .mode:before {
+.play-game .main-actions .modes .mode:not(.selected):before {
     filter: grayscale(1) blur(3px) !important;
 }
-.play-game .main-actions .modes .mode:not(.selected) {
+.play-game .main-actions .modes .mode {
     transition: all 0.3s ease-out !important;
 }
