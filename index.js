@@ -71,7 +71,7 @@ for (const download_button of download_buttons) {
 
 //discord server button
 document.querySelector('button.discord').addEventListener("click", () => {
-    window.open('https://discord.gg/8Amw32CrGR')
+    window.open('https://discord.gg/vQnrUVxAvT')
 })
 
 //incompat. download modal
