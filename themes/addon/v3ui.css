@@ -18,10 +18,19 @@
 .rounded-tl-xl {
     border-radius: 0.75rem 0 0 0.75rem !important;
 }
+.rounded-tl-xl .inner {
+    border-radius: 0.75rem 0 0 0.75rem !important;
+}
 .rounded-tr-xl {
     border-radius: 0 0.75rem 0.75rem 0 !important;
 }
+.rounded-tr-xl .inner {
+    border-radius: 0 0.75rem 0.75rem 0 !important;
+}
 .rounded-t-xl {
+    border-radius: 0.75rem !important;
+}
+.rounded-t-xl .inner {
     border-radius: 0.75rem !important;
 }
 
@@ -43,6 +52,9 @@
     bottom: calc(-30vw + 30px) !important;
     border-radius: 99999px !important;
     background: #0004 !important;
+}
+.animal-data .meter > div:nth-child(1) {
+    border-radius: 99999px !important;
 }
 .animal-data .animal .inner .image {
     transform: rotate(-90deg) !important;
