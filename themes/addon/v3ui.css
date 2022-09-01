@@ -22,7 +22,7 @@
     border-radius: 0 0.75rem 0.75rem 0 !important;
 }
 .rounded-t-xl {
-    border-radius: 0.75rem;
+    border-radius: 0.75rem !important;
 }
 
 /* XP BAR */
@@ -42,7 +42,7 @@
     left: 50vw !important;
     bottom: calc(-30vw + 30px) !important;
     border-radius: 99999px !important;
-    background: #0004;
+    background: #0004 !important;
 }
 .animal-data .animal .inner .image {
     transform: rotate(-90deg) !important;
