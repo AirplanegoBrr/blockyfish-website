@@ -1,0 +1,60 @@
+.middle {
+    bottom: 60px !important;
+}
+.stats {
+    width: 100vw !important;
+}
+
+/* BOOST BAR */
+.meters {
+    height: 1.3rem !important;
+}
+.boosts {
+    transform: rotate(-90deg) !important;
+    margin-left: calc(-100vw + 50px) !important;
+    margin-top: -120px !important;
+    width: 250px !important;
+}
+.rounded-tl-xl {
+    border-radius: 0.75rem 0 0 0.75rem !important;
+}
+.rounded-tr-xl {
+    border-radius: 0 0.75rem 0.75rem 0 !important;
+}
+.rounded-t-xl {
+    border-radius: 0.75rem;
+}
+
+/* XP BAR */
+.animal-data {
+    flex-direction: column-reverse !important;
+    left: 50vw !important;
+}
+.animal-data .hotkey {
+    display: none !important;
+}
+.animal-data .animal {
+    width: 1.5rem !important;
+    height: 60vw !important;
+    transform: rotate(90deg) !important;
+    margin: auto !important;
+    position: fixed !important;
+    left: 50vw !important;
+    bottom: calc(-30vw + 30px) !important;
+    border-radius: 99999px !important;
+    background: #0004;
+}
+.animal-data .animal .inner .image {
+    transform: rotate(-90deg) !important;
+    width: 0.8rem !important;
+    height: auto !important;
+    margin: 20px 0 !important;
+}
+.animal-data .animal .inner .xp-indicator {
+    transform: rotate(-90deg) !important;
+    white-space: nowrap !important;
+}
+/* hide info (not in v3) */
+.animal-data .detailed-info {
+    display: none !important;
+}

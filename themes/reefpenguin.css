@@ -1,0 +1,266 @@
+body {
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(dpbg6.png) !important;
+}
+.home-page .home-bg {
+    background-image: url(dpbg6.png) !important;
+    filter: blur(10px);
+}
+.home-page.playing {
+    --tw-bg-opacity: 0.3 !important;
+    animation-duration: 0.4s !important;
+    backdrop-filter: blur(10px) !important;
+}
+.slideInDown {
+    -webkit-animation-name: fadeIn !important;
+    animation-name: fadeIn !important;
+}
+.slideOutUp {
+    -webkit-animation-name: fadeOut !important;
+    animation-name: fadeOut !important;
+}
+div.play-game > div.el-image {
+    background: url(blockfishlogo.png) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: bottom !important;
+}
+div.play-game > div.el-image > img {
+    opacity: 0 !important;
+}
+.death-screen-container .bg {
+    background-image: url(deathbg.png) !important;
+}
+.death-screen-container {
+    backdrop-filter: blur(5px) sepia(0.4) saturate(0.7)
+}
+.loading-container {
+    background-image: url(loadingbg.png) !important;
+}
+.loading-container .loading-bar .inner {
+    background-color: #000 !important;
+}
+.loading-container .loading-bar .ball {
+    background-image: url(loader.png) !important;
+    width: 0px !important;
+    padding: 32px 64px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+.p-2 .container {
+    background-color: #0003 !important;
+    /* backdrop-filter: blur(10px) !important; */
+}
+.home-widget {
+    background-color: #0003 !important;
+    /* backdrop-filter: blur(10px) !important; */
+}
+.top-right-nav {
+    background-color: #0003 !important;
+    /* backdrop-filter: blur(10px) !important; */
+}
+.btn {
+    border-bottom-width: 0px !important;
+}
+
+/* BUTTONS */
+.btn:not(.el-button--text).blue {
+    background-color: #0004 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).red {
+    background-color: #0003 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).pink {
+    background-color: #0002 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).green {
+    background-color: #0003 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).purple {
+    background-color: #0004 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).indigo {
+    background-color: #0003 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).yellow {
+    background-color: #0002 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).orange {
+    background-color: #0002 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).black {
+    background-color: #0005 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).gray {
+    background-color: #0004 !important;
+    transition: all 0.3s;
+}
+.btn:not(.el-button--text).cyan {
+    background-color: #0002 !important;
+    transition: all 0.3s;
+}
+
+/* HOVERED BUTTONS */
+.btn:not(.el-button--text).blue:hover {
+    background-color: #2563eb !important;
+}
+.btn:not(.el-button--text).red:hover {
+    background-color: #dc2626 !important;
+}
+.btn:not(.el-button--text).pink:hover {
+    background-color: #db2777 !important;
+}
+.btn:not(.el-button--text).green:hover {
+    background-color: rgba(5,150,105) !important;
+}
+.btn:not(.el-button--text).purple:hover {
+    background-color: #7c3aed !important;
+}
+.btn:not(.el-button--text).indigo:hover {
+    background-color: #4f46e5 !important;
+}
+.btn:not(.el-button--text).yellow:hover {
+    background-color: #d97706 !important;
+}
+.btn:not(.el-button--text).orange:hover {
+    background-color: #ea580c !important;
+}
+.btn:not(.el-button--text).black:hover {
+    background-color: #1f2937 !important;
+}
+.btn:not(.el-button--text).gray:hover {
+    background-color: #4b5563 !important;
+}
+.btn:not(.el-button--text).cyan:hover {
+    background-color: #0891b2 !important;
+}
+.vfm--overlay {
+    background-color: rgba(0,0,0,.2) !important;
+    backdrop-filter: blur(10px) !important;
+}
+.modal-content {
+    background-color: #1f293766 !important;
+    --tw-border-opacity: 0 !important;
+}
+.forum-page {
+    --tw-bg-opacity: 0.2 !important;
+}
+.forum-page .inner .forum-posts .forum-post-summary {
+    --tw-border-opacity: 0.3 !important;
+    transition: all 0.2s;
+}
+.forum-page .inner .forum-posts .forum-post-summary:hover {
+    --tw-bg-opacity: 0.2 !important;
+}
+
+body .el-input__wrapper, .dark body .el-textarea__wrapper {
+    --tw-bg-opacity: 0.2 !important;
+    background-color: rgba(17,24,39,var(--tw-bg-opacity)) !important;
+    color: #fff !important;
+    border-color: #fff2 !important;
+}
+.play-game .name-input .el-input__wrapper .el-input__inner {
+    color: #eee !important;
+}
+
+.tabs .tab.active {
+    background-color: #2563eb !important;
+}
+.animals-container .animals .animal {
+    --tw-bg-opacity: 0.3 !important;
+}
+.pets .pet {
+    --tw-bg-opacity: 0.3 !important;
+}
+.emotes .emote {
+    --tw-bg-opacity: 0.3 !important;
+}
+.store .main .tiers .tier-btn:not(.active) {
+    --tw-bg-opacity: 0.2 !important;
+}
+.skins-container .skins .skin {
+    --tw-bg-opacity: 0.3 !important;
+}
+.skin-container .skin .image {
+    background-color: #3071af66 !important;
+}
+.pet-container .pet .image {
+    background-color: #3071af66 !important;
+}
+.store .emote-container .emote .image {
+    background-color: #3071af66 !important;
+}
+#app > div.overlay > div.container > div.row > div.emote-container > div.emote > div.image {
+    height: -webkit-fill-available !important;
+    width: -webkit-fill-available !important;
+}
+.profile .content {
+    background-color: #0001 !important;
+}
+.right .actions .buy .price {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+.forum-post-page .inner {
+    --tw-bg-opacity: 0.1 !important;
+}
+body .el-textarea__inner {
+    --tw-bg-opacity: 0.2 !important;
+}
+.create-comment .input {
+    --el-input-border-color: #232d3b00 !important;
+}
+.create-comment .nav-bar {
+    --tw-bg-opacity: 0.5 !important;
+}
+.el-table th.el-table__cell {
+    background-color: #0002 !important;
+}
+.el-table__footer-wrapper, .el-table__header-wrapper {
+    border-radius: 10px 10px 0px 0px !important;
+}
+.play-game .main-actions .modes .mode:not(.selected):before {
+    filter: grayscale(1) blur(3px) !important;
+}
+.play-game .main-actions .modes .mode {
+    transition: all 0.3s ease-out !important;
+}
+.social-modal .content, .social-modal .sidebar--left {
+    background-color: #0002 !important;
+}
+.el-slider__button {
+    background-color: #409eff !important;
+    border: none !important;
+    width: 15px !important;
+    height: 15px !important;
+}
+.el-slider__runway {
+    height: 2px !important;
+}
+.el-slider__bar {
+    height: 5px !important;
+    top: -2px !important;
+    transition: all .1s ease-out !important;
+}
+.el-slider__button-wrapper {
+    top: -17px !important;
+    transition: all .1s ease-out !important;
+}
+
+/* GAME UI */
+.meter .inner {
+    transition: all .3s ease-out !important;
+}
