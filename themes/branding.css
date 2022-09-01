@@ -1,0 +1,9 @@
+div.play-game > div.el-image {
+    background: url(blockfishlogo.png) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: bottom !important;
+}
+div.play-game > div.el-image > img {
+    opacity: 0 !important;
+}
