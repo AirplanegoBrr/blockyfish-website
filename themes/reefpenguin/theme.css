@@ -7,7 +7,7 @@ body {
 }
 .home-page .home-bg {
     background-image: url(dpbg6.png) !important;
-    filter: blur(10px);
+    filter: blur(10px) brightness(0.7) grayscale(0.2);
 }
 .home-page.playing {
     --tw-bg-opacity: 0.3 !important;
