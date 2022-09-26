@@ -15,6 +15,14 @@ window.addEventListener("scroll", (event) => {
 });
 
 //download button without using href
+function matches(text, partial) {
+    try {
+        return text.toLowerCase().indexOf(partial.toLowerCase()) > -1;
+    } catch (e) {
+        console.log('uh oh')
+    }
+}
+
 const download_buttons = document.getElementsByClassName('download')
 const download_text = document.getElementById('download-text')
 const pre_download = document.getElementById('pre-download')
@@ -43,9 +51,18 @@ async function startDownload() {
         top: download_pos,
         behavior: 'smooth'
     })
+    Name = "unknown"
+    if (navigator.appVersion.indexOf("Win") != -1) Name = "win";
+    if (navigator.appVersion.indexOf("Mac") != -1) Name = "mac";
+    if (navigator.appVersion.indexOf("X11") != -1) Name = "x11";
+    if (navigator.appVersion.indexOf("Linux") != -1) Name = "linux";
     let t = await (await (fetch('https://api.github.com/repos/blockyfish-client/desktop-client/releases/latest'))).json();
-    download(t.assets[0].browser_download_url)
-    redownload.href = t.assets[0].browser_download_url 
+    for (let i = 0; i < t.assets.length; i++) {
+        if (matches(t.assets[i].name, Name)) {
+            download(t.assets[i].browser_download_url)
+            redownload.href = t.assets[i].browser_download_url 
+        }
+    }
     pre_download.style.opacity = '0'
     document.getElementById('bottom-download').style.opacity = '0'
     setTimeout(function() {
@@ -94,6 +111,15 @@ modal_proceed.addEventListener("click", () => {
 async function getDownloadCount() {
     let json_data = await (await (fetch('https://api.github.com/repos/blockyfish-client/desktop-client/releases/latest'))).json();
     const download_count = document.getElementById('download-count')
-    download_count.innerText = json_data.assets[0].download_count + ' downloads for ' + json_data.tag_name
+    Name = "unknown"
+    if (navigator.appVersion.indexOf("Win") != -1) Name = "win";
+    if (navigator.appVersion.indexOf("Mac") != -1) Name = "mac";
+    if (navigator.appVersion.indexOf("X11") != -1) Name = "x11";
+    if (navigator.appVersion.indexOf("Linux") != -1) Name = "linux";
+    for (let i = 0; i < json_data.assets.length; i++) {
+        if (matches(json_data.assets[i].name, Name)) {
+            download_count.innerText = json_data.assets[i].download_count + ' downloads for ' + json_data.tag_name
+        }
+    }
 }
 getDownloadCount()
