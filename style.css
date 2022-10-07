@@ -127,6 +127,7 @@ button {
     user-select: none;
     vertical-align: middle;
     -webkit-appearance: none;
+    appearance: none;
     min-height: 2.5rem;
     border-radius: 0.25rem;
     padding: 0.75rem 1.25rem;
