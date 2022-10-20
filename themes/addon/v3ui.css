@@ -53,9 +53,9 @@
     border-radius: 99999px !important;
     background: #0004 !important;
 }
-.animal-data .meter > div:nth-child(1) {
+/* .animal-data .meter > div:nth-child(1) {
     border-radius: 99999px !important;
-}
+} */
 .animal-data .animal .inner .image {
     transform: rotate(-90deg) !important;
     width: 0.8rem !important;
