@@ -7,3 +7,6 @@ div.play-game > div.el-image {
 div.play-game > div.el-image > img {
     opacity: 0 !important;
 }
+button {
+    outline: none !important;
+}
