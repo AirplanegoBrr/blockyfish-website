@@ -124,3 +124,39 @@ button.download i {
 	display: flex;
 	flex-direction: row;
 }
+
+.search-box {
+	padding: 12px 10px 12px 20px;
+	background: #091010;
+	border-radius: 5px;
+	border: #404545 2px solid;
+	transition: all 0.3s;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.search-box:focus-within {
+	border: #3a71c1 2px solid;
+}
+.search-box i {
+	margin-right: 10px;
+}
+.search-box input {
+	background: none;
+	outline: none;
+	border: none;
+	color: #fff;
+	min-width: 200px;
+	font-family: Quicksand;
+	font-size: 16px;
+}
+.search-box button {
+	background: none;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+.search-box input:placeholder-shown ~ button {
+	opacity: 0;
+	pointer-events: none;
+}

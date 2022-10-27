@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" href="cards.css" />
 	<link rel="stylesheet" href="../link.css" />
-	<script src="index.js"></script>
+	<script src="https://kit.fontawesome.com/944eb371a4.js"></script>
 </head>
 <body>
 	<div id="nav">
@@ -48,9 +48,13 @@
 	<div id="title-banner">
 		<div class="inner">
 			<h1>Blockyfish Plugins</h1>
-			<form>
+			<form class="search-box">
 				<i class="fa-duotone fa-magnifying-glass"></i>
 				<input type="text" placeholder="Type here to search" />
+				<button type="submit" disabled style="display: none"></button>
+				<button type="reset">
+					<i class="fa-duotone fa-xmark"></i>
+				</button>
 			</form>
 		</div>
 	</div>
@@ -247,6 +251,6 @@
 			</div>
 		</div>
 	</div>
-	<script src="cards.js"></script>
-	<script src="https://kit.fontawesome.com/944eb371a4.js"></script>
 </body>
+<script src="cards.js"></script>
+<script src="index.js"></script>
