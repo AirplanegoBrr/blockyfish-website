@@ -1,270 +1,577 @@
 <!DOCTYPE html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Blockyfish Client</title>
-    <meta content="Blockyfish Client" property="og:title" />
-    <meta content="Just a desktop client for deeeep.io" property="og:description" />
-    <meta property="og:site_name" content="It*s ⫷Ꮆяᗩиᕲ💠ᑭî⫸" />
-    <meta property="og:image" content="/assets/icon.png">
-    <link rel="icon" type="image/png" href="assets/icon.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="scroll-promt.css">
-    <link rel="stylesheet" href="scrollbar.css">
-    <link rel="stylesheet" href="image-carousel.css">
-    <link rel="stylesheet" href="link.css">
+	<meta charset="utf-8" />
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+	/>
+	<title>Blockyfish Client</title>
+	<meta content="Blockyfish Client" property="og:title" />
+	<meta
+		content="Just a desktop client for deeeep.io"
+		property="og:description"
+	/>
+	<meta property="og:site_name" content="It*s ⫷Ꮆяᗩиᕲ💠ᑭî⫸" />
+	<meta property="og:image" content="/assets/icon.png" />
+	<link rel="icon" type="image/png" href="assets/icon.png" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="scroll-promt.css" />
+	<link rel="stylesheet" href="scrollbar.css" />
+	<link rel="stylesheet" href="image-carousel.css" />
+	<link rel="stylesheet" href="link.css" />
 </head>
 <body>
-    <div id="modal-bg" style="opacity: 0;">
-        <div id="modal-box">
-            <h3>Incompatible</h3>
-            <p>Blockyfish client only works on Windows and Linux</p>
-            <div>
-                <button style="margin-right: 10px;" id="modal-cancel">
-                    Cancel
-                </button>
-                <button id="modal-proceed">
-                    Download anyways
-                </button>
-            </div>
-        </div>
-    </div>
-    <div id="body">
-        <div id="top">
-            <div id="header">
-                <img draggable="false" src="assets/icon.png" class="icon">
-                <div class="spacer"></div>
-                <h1>
-                    Blockyfish Client
-                </h1>
-            </div>
-            <div id="desc">
-                <p class="text-center">
-                    Just a nice little client for deeeep.io with some cool extra features
-                </p>
-                <p class="text-center" id="download-count">
-                    Unknown downloads for unknown version
-                </p>
-            </div>
-            <button class="download">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-download" viewBox="0 0 16 16">
-                    <path d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"/>
-                    <path d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
-                </svg>
-                <div class="spacer"></div>
-                <span>
-                    Download
-                </span>
-            </button>
-            <div class="prompt">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40.05px" height="35.69px" viewBox="-8.369 -3.009 40.05 35.69" enable-background="new -8.369 -3.009 40.05 35.69" xml:space="preserve" class="svg-scroll">
-                  <g>
-                      <path d="M12.406,32.394l7.6-7.601l0,0l11.301-11.2c0.5-0.5,0.5-1.199,0-1.699l-2.301-2.301c-0.5-0.5-1.199-0.5-1.699,0l-14.9,14.9
+	<div id="modal-bg" style="opacity: 0">
+		<div id="modal-box">
+			<h3>Incompatible</h3>
+			<p>Blockyfish client only works on Windows and Linux</p>
+			<div>
+				<button style="margin-right: 10px" id="modal-cancel">Cancel</button>
+				<button id="modal-proceed">Download anyways</button>
+			</div>
+		</div>
+	</div>
+	<div id="nav">
+		<div id="nav-content">
+			<a href="https://blockyfish.netlify.app">
+				<img
+					src="assets/icon.png"
+					alt="Blockyfish logo"
+					width="32px"
+					height="32px"
+				/>
+			</a>
+			<div class="button-row">
+				<a href="https://blockyfish.netlify.app/plugins" class="nav-links"
+					>Plugins</a
+				>
+				<a href="https://github.com/blockyfish-client" class="nav-links"
+					>GitHub</a
+				>
+				<a href="https://discord.gg/vQnrUVxAvT" class="nav-links">Discord</a>
+			</div>
+		</div>
+	</div>
+	<div id="body">
+		<div id="top">
+			<div id="header">
+				<img draggable="false" src="assets/icon.png" class="icon" />
+				<div class="spacer"></div>
+				<h1>Blockyfish Client</h1>
+			</div>
+			<div id="desc">
+				<p class="text-center">
+					Just a nice little client for deeeep.io with some cool extra features
+				</p>
+				<p class="text-center" id="download-count">
+					Unknown downloads for unknown version
+				</p>
+			</div>
+			<button class="download">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="16"
+					height="16"
+					fill="currentColor"
+					class="bi bi-cloud-download"
+					viewBox="0 0 16 16"
+				>
+					<path
+						d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"
+					/>
+					<path
+						d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"
+					/>
+				</svg>
+				<div class="spacer"></div>
+				<span> Download </span>
+			</button>
+			<div class="prompt">
+				<svg
+					version="1.1"
+					id="Layer_1"
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					x="0px"
+					y="0px"
+					width="40.05px"
+					height="35.69px"
+					viewBox="-8.369 -3.009 40.05 35.69"
+					enable-background="new -8.369 -3.009 40.05 35.69"
+					xml:space="preserve"
+					class="svg-scroll"
+				>
+					<g>
+						<path
+							d="M12.406,32.394l7.6-7.601l0,0l11.301-11.2c0.5-0.5,0.5-1.199,0-1.699l-2.301-2.301c-0.5-0.5-1.199-0.5-1.699,0l-14.9,14.9
                       c-0.5,0.5-1.2,0.5-1.701,0l-14.8-14.9c-0.5-0.5-1.2-0.5-1.7,0l-2.199,2.2c-0.5,0.5-0.5,1.2,0,1.7l11.199,11.2l0,0l7.601,7.6
-                      C11.206,32.793,12.006,32.793,12.406,32.394"/>
-                    <path d="M12.031,8.565l3.795-3.795l0,0l5.643-5.593c0.25-0.25,0.25-0.599,0-0.849L20.32-2.821c-0.25-0.25-0.599-0.25-0.849,0
+                      C11.206,32.793,12.006,32.793,12.406,32.394"
+						/>
+						<path
+							d="M12.031,8.565l3.795-3.795l0,0l5.643-5.593c0.25-0.25,0.25-0.599,0-0.849L20.32-2.821c-0.25-0.25-0.599-0.25-0.849,0
                       L12.031,4.62c-0.25,0.25-0.599,0.25-0.849,0L3.791-2.821c-0.25-0.25-0.599-0.25-0.849,0L1.844-1.723c-0.25,0.25-0.25,0.6,0,0.849
-                      L7.436,4.72l0,0l3.795,3.795C11.431,8.764,11.831,8.764,12.031,8.565"/>
-                  </g>
-                </svg>
-            </div>
-        </div>
-        <div id="main">
-            <div id="container">
-                <div class="row">
-                    <div class="box feature">
-                        <h2 class="list-head">Main features</h2>
-                        <ul>
-                            <li>HACKS!!</li>
-                            <ul>
-                                <li>Transparent ground</li>
-                                <li>No charge boost time (hold control key)</li>
-                                <li>No ink/flashbang</li>
-                                <li>Infinite zoom</li>
-                                <li>See hiding animals</li>
-                            </ul>
-                            <li>Detailed rich presence for Discord</li>
-                            <li>Togglable adblocker</li>
-                            <li>Doctorpus assets</li>
-                            <li>Built-in evolution tree</li>
-                            <li>Auto update checker for client updates</li>
-                            <li>Taskbar notification badges for forum notifications</li>
-                            <li>Exit confirmation dialog</li>
-                            <li>Auto-loading in forums</li>
-                            <li><code>/settarget</code> command for multiboxing</li>
-                            <li>Bringing back v3's <code>/mute</code> command!</li>
-                        </ul>
-                    </div>
-                    <div class="spacer"></div>
-                    <div class="box feature">
-                        <h2 class="list-head">Planned features</h2>
-                        <ul>
-                            <li>Auto-fill name</li>
-                            <li>Desktop notifications for forum replies</li>
-                            <li>Account switcher</li>
-                            <li>Multiboxing UI</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- <hr> -->
-                <div class="row">
-                    <div id="img-gallery">
-                        <h2>Image gallery</h2>
-                        <section class="img-carousel">
-                            <div class="nine columns">
-                              <div class="coverflow top10 bot10">
-                                <a class="prev-arrow img-gallery-link"></a>
-                                <a class="img-gallery-link" draggable="false" href="assets/screenshots/1.png" target="_blank"><img draggable="false" src="assets/screenshots/1.png" class="coverflow__image" /></a>
-                                <a class="img-gallery-link" draggable="false" href="assets/screenshots/2.png" target="_blank"><img draggable="false" src="assets/screenshots/2.png" class="coverflow__image" /></a>
-                                <a class="img-gallery-link" draggable="false" href="assets/screenshots/3.png" target="_blank"><img draggable="false" src="assets/screenshots/3.png" class="coverflow__image" /></a>
-                                <a class="img-gallery-link" draggable="false" href="assets/screenshots/4.png" target="_blank"><img draggable="false" src="assets/screenshots/4.png" class="coverflow__image" /></a>
-                                <a class="img-gallery-link" draggable="false" href="assets/screenshots/5.png" target="_blank"><img draggable="false" src="assets/screenshots/5.png" class="coverflow__image" /></a>
-                                <a class="img-gallery-link" draggable="false" href="assets/screenshots/6.png" target="_blank"><img draggable="false" src="assets/screenshots/6.png" class="coverflow__image" /></a>
-                                <a class="img-gallery-link" draggable="false" href="assets/screenshots/7.png" target="_blank"><img draggable="false" src="assets/screenshots/7.png" class="coverflow__image" /></a>
-                                <a class="img-gallery-link" draggable="false" href="assets/screenshots/8.png" target="_blank"><img draggable="false" src="assets/screenshots/8.png" class="coverflow__image" /></a>
-                                <a class="next-arrow img-gallery-link"></a>
-                              </div>
-                            </div>
-                        </section>
-                        <section class="img-grid">
-                            <div class="row-force">
-                                <div class="column">
-                                    <a href="assets/screenshots/1.png" draggable="false" target="_blank"><img draggable="false" src="assets/screenshots/1.png" class="img-grid" /></a>
-                                    <a href="assets/screenshots/2.png" draggable="false" target="_blank"><img draggable="false" src="assets/screenshots/2.png" class="img-grid" /></a>
-                                    <a href="assets/screenshots/3.png" draggable="false" target="_blank"><img draggable="false" src="assets/screenshots/3.png" class="img-grid" /></a>
-                                    <a href="assets/screenshots/4.png" draggable="false" target="_blank"><img draggable="false" src="assets/screenshots/4.png" class="img-grid" /></a>
-                                </div>
-                                <div class="column">
-                                    <a href="assets/screenshots/5.png" draggable="false" target="_blank"><img draggable="false" src="assets/screenshots/5.png" class="img-grid" /></a>
-                                    <a href="assets/screenshots/6.png" draggable="false" target="_blank"><img draggable="false" src="assets/screenshots/6.png" class="img-grid" /></a>
-                                    <a href="assets/screenshots/7.png" draggable="false" target="_blank"><img draggable="false" src="assets/screenshots/7.png" class="img-grid" /></a>
-                                    <a href="assets/screenshots/8.png" draggable="false" target="_blank"><img draggable="false" src="assets/screenshots/8.png" class="img-grid" /></a>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-                <!-- <hr> -->
-                <div class="row">
-                    <div>
-                        <h2>FAQs</h2>
-                        <div>
-                            <div class="box">
-                                <h3>Will using this client get my account banned?</h3>
-                                <p>
-                                    Nope. There is currently no way to detect whether you are using a client or not. But just to be safe, make sure not to tell people that you use the client unless you trust them. 
-                                </p>
-                            </div>
-                            <div class="spacer"></div>
-                            <div class="box">
-                                <h3>Why is it so laggy?</h3>
-                                <p>
-                                    The client runs background scripts that allow cool things to work like aim assist, built-in evolution tree, slash commands, and more. If you are experiencing lag spikes, try turning off the custom theme and turning off anti-aliasing. 
-                                </p>
-                            </div>
-                            <div class="spacer"></div>
-                            <div class="box">
-                                <h3>Are there viruses in the client?</h3>
-                                <p>
-                                    Absolutely not! Make sure you download from this website to avoid unwanted software and viruses from being bundled with the installer. Don't run installer files that other people send you. 
-                                </p>
-                            </div>
-                            <div class="spacer"></div>
-                            <div class="box">
-                                <h3>Hey you liar! Virus total says it's a virus!!</h3>
-                                <p>
-                                    That is a false positive result. You can check out the client's source code <a href="https://github.com/blockyfish-client/Desktop-Client" class="underline-center">here</a>. Trapmine gives a false positive result because of how the client handles app updates. To avoid creating junk files, the client download updates into your Downloads folder so if something goes wrong, you can manually delete the downloaded update package with ease. After an update is complete, the app will attempt to remove its own update file. This action makes Trapmine falsely flag the file as "malicious". 
-                                </p>
-                            </div>
-                            <div class="spacer"></div>
-                            <div class="box">
-                                <h3>How do I use the aim assist feature?</h3>
-                                <p>
-                                    You can press A to toggle the aim assist (aka aimbot) on or off. 
-                                </p>
-                            </div>
-                            <div class="box">
-                                <h3>How can I help?</h3>
-                                <p>
-                                    Join the <a href="https://discord.gg/vQnrUVxAvT" class="underline-center">Discord server</a> to recieve updates regarding the client. You can contribute by suggesting ideas and features that you want in the client. If you have a good knowledge of NodeJS and ElectronJS, you can also ask to help with the development of the client. 
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="column">
-                    <h1 class="text-center" style="margin: 25px 0px 10px 0px;">
-                        Get it now
-                    </h1>
-                    <button id="bottom-download" class="download center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-download" viewBox="0 0 16 16">
-                            <path d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"/>
-                            <path d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
-                        </svg>
-                        <div class="spacer"></div>
-                        <span>
-                            Download
-                        </span>
-                    </button>
-                    <div id="pre-download" style="opacity: 1;">
-                        <p class="text-center" id="download-text">
-                            Install the client now with an easy one-click installer
-                        </p>
-                    </div>
-                    <div id="post-download" style="opacity: 0; display: none;">
-                        <p class="text-center" id="download-text">
-                            Thank you for downloading. The download should initiate momentarily. If not, click <a href="#" class="underline-center" id="redownload-link">here</a>
-                        </p>
-                        <button class="discord center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-download" viewBox="0 0 16 16">
-                                <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
-                            </svg>
-                            <div class="spacer"></div>
-                            <span>
-                                Join the Discord server
-                            </span>
-                        </button>
-                    </div>
-                </div>
-                <hr>
-                <a draggable="false" style="display: flex;align-items: center;width: fit-content;margin: 0px auto;" href="https://docs-blockyfish.netlify.app" class="social" target="_blank">
-                    <h3 class="text-center">Documentations</h3>
-                    <div class="spacer"></div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-                    </svg>
-                </a>
-                <a draggable="false" style="display: flex;align-items: center;width: fit-content;margin: 0px auto;" href="https://docs-blockyfish.netlify.app/changelog" class="social" target="_blank">
-                    <h3 class="text-center">Changelogs</h3>
-                    <div class="spacer"></div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        <div id="footer">
-            <div style="position: fixed;left: 15px;">
-                <p style="margin: 0px;">blockyfish client</p>
-            </div>
-            <a draggable="false" href="https://discord.gg/vQnrUVxAvT" target="_blank" class="social">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
-                    <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
-                </svg>
-            </a>
-            <div class="spacer"></div>
-            <a draggable="false" href="https://github.com/blockyfish-client/Desktop-Client" target="_blank" class="social">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg>
-            </a>
-            <div class="spacer"></div>
-            <p style="margin-right: 20px;">Made by pi</p>
-        </div>
-    </div>
-    <script src="index.js"></script>
-    <script src="image-carousel.js"></script>
+                      L7.436,4.72l0,0l3.795,3.795C11.431,8.764,11.831,8.764,12.031,8.565"
+						/>
+					</g>
+				</svg>
+			</div>
+		</div>
+		<div id="main">
+			<div id="container">
+				<div class="row">
+					<div class="box feature">
+						<h2 class="list-head">Main features</h2>
+						<ul>
+							<li>HACKS!!</li>
+							<ul>
+								<li>Transparent ground</li>
+								<li>No charge boost time (hold control key)</li>
+								<li>No ink/flashbang</li>
+								<li>Infinite zoom</li>
+								<li>See hiding animals</li>
+							</ul>
+							<li>Detailed rich presence for Discord</li>
+							<li>Togglable adblocker</li>
+							<li>Doctorpus assets</li>
+							<li>Built-in evolution tree</li>
+							<li>Auto update checker for client updates</li>
+							<li>Taskbar notification badges for forum notifications</li>
+							<li>Exit confirmation dialog</li>
+							<li>Auto-loading in forums</li>
+							<li><code>/settarget</code> command for multiboxing</li>
+							<li>Bringing back v3's <code>/mute</code> command!</li>
+						</ul>
+					</div>
+					<div class="spacer"></div>
+					<div class="box feature">
+						<h2 class="list-head">Planned features</h2>
+						<ul>
+							<li>Auto-fill name</li>
+							<li>Desktop notifications for forum replies</li>
+							<li>Account switcher</li>
+							<li>Multiboxing UI</li>
+						</ul>
+					</div>
+				</div>
+				<!-- <hr> -->
+				<div class="row">
+					<div id="img-gallery">
+						<h2>Image gallery</h2>
+						<section class="img-carousel">
+							<div class="nine columns">
+								<div class="coverflow top10 bot10">
+									<a class="prev-arrow img-gallery-link"></a>
+									<a
+										class="img-gallery-link"
+										draggable="false"
+										href="assets/screenshots/1.png"
+										target="_blank"
+										><img
+											draggable="false"
+											src="assets/screenshots/1.png"
+											class="coverflow__image"
+									/></a>
+									<a
+										class="img-gallery-link"
+										draggable="false"
+										href="assets/screenshots/2.png"
+										target="_blank"
+										><img
+											draggable="false"
+											src="assets/screenshots/2.png"
+											class="coverflow__image"
+									/></a>
+									<a
+										class="img-gallery-link"
+										draggable="false"
+										href="assets/screenshots/3.png"
+										target="_blank"
+										><img
+											draggable="false"
+											src="assets/screenshots/3.png"
+											class="coverflow__image"
+									/></a>
+									<a
+										class="img-gallery-link"
+										draggable="false"
+										href="assets/screenshots/4.png"
+										target="_blank"
+										><img
+											draggable="false"
+											src="assets/screenshots/4.png"
+											class="coverflow__image"
+									/></a>
+									<a
+										class="img-gallery-link"
+										draggable="false"
+										href="assets/screenshots/5.png"
+										target="_blank"
+										><img
+											draggable="false"
+											src="assets/screenshots/5.png"
+											class="coverflow__image"
+									/></a>
+									<a
+										class="img-gallery-link"
+										draggable="false"
+										href="assets/screenshots/6.png"
+										target="_blank"
+										><img
+											draggable="false"
+											src="assets/screenshots/6.png"
+											class="coverflow__image"
+									/></a>
+									<a
+										class="img-gallery-link"
+										draggable="false"
+										href="assets/screenshots/7.png"
+										target="_blank"
+										><img
+											draggable="false"
+											src="assets/screenshots/7.png"
+											class="coverflow__image"
+									/></a>
+									<a
+										class="img-gallery-link"
+										draggable="false"
+										href="assets/screenshots/8.png"
+										target="_blank"
+										><img
+											draggable="false"
+											src="assets/screenshots/8.png"
+											class="coverflow__image"
+									/></a>
+									<a class="next-arrow img-gallery-link"></a>
+								</div>
+							</div>
+						</section>
+						<section class="img-grid">
+							<div class="row-force">
+								<div class="column">
+									<a
+										href="assets/screenshots/1.png"
+										draggable="false"
+										target="_blank"
+										><img
+											draggable="false"
+											src="assets/screenshots/1.png"
+											class="img-grid"
+									/></a>
+									<a
+										href="assets/screenshots/2.png"
+										draggable="false"
+										target="_blank"
+										><img
+											draggable="false"
+											src="assets/screenshots/2.png"
+											class="img-grid"
+									/></a>
+									<a
+										href="assets/screenshots/3.png"
+										draggable="false"
+										target="_blank"
+										><img
+											draggable="false"
+											src="assets/screenshots/3.png"
+											class="img-grid"
+									/></a>
+									<a
+										href="assets/screenshots/4.png"
+										draggable="false"
+										target="_blank"
+										><img
+											draggable="false"
+											src="assets/screenshots/4.png"
+											class="img-grid"
+									/></a>
+								</div>
+								<div class="column">
+									<a
+										href="assets/screenshots/5.png"
+										draggable="false"
+										target="_blank"
+										><img
+											draggable="false"
+											src="assets/screenshots/5.png"
+											class="img-grid"
+									/></a>
+									<a
+										href="assets/screenshots/6.png"
+										draggable="false"
+										target="_blank"
+										><img
+											draggable="false"
+											src="assets/screenshots/6.png"
+											class="img-grid"
+									/></a>
+									<a
+										href="assets/screenshots/7.png"
+										draggable="false"
+										target="_blank"
+										><img
+											draggable="false"
+											src="assets/screenshots/7.png"
+											class="img-grid"
+									/></a>
+									<a
+										href="assets/screenshots/8.png"
+										draggable="false"
+										target="_blank"
+										><img
+											draggable="false"
+											src="assets/screenshots/8.png"
+											class="img-grid"
+									/></a>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+				<!-- <hr> -->
+				<div class="row">
+					<div>
+						<h2>FAQs</h2>
+						<div>
+							<div class="box">
+								<h3>Will using this client get my account banned?</h3>
+								<p>
+									Nope. There is currently no way to detect whether you are
+									using a client or not. But just to be safe, make sure not to
+									tell people that you use the client unless you trust them.
+								</p>
+							</div>
+							<div class="spacer"></div>
+							<div class="box">
+								<h3>Why is it so laggy?</h3>
+								<p>
+									The client runs background scripts that allow cool things to
+									work like aim assist, built-in evolution tree, slash commands,
+									and more. If you are experiencing lag spikes, try turning off
+									the custom theme and turning off anti-aliasing.
+								</p>
+							</div>
+							<div class="spacer"></div>
+							<div class="box">
+								<h3>Are there viruses in the client?</h3>
+								<p>
+									Absolutely not! Make sure you download from this website to
+									avoid unwanted software and viruses from being bundled with
+									the installer. Don't run installer files that other people
+									send you.
+								</p>
+							</div>
+							<div class="spacer"></div>
+							<div class="box">
+								<h3>Hey you liar! Virus total says it's a virus!!</h3>
+								<p>
+									That is a false positive result. You can check out the
+									client's source code
+									<a
+										href="https://github.com/blockyfish-client/Desktop-Client"
+										class="underline-center"
+										>here</a
+									>. Trapmine gives a false positive result because of how the
+									client handles app updates. To avoid creating junk files, the
+									client download updates into your Downloads folder so if
+									something goes wrong, you can manually delete the downloaded
+									update package with ease. After an update is complete, the app
+									will attempt to remove its own update file. This action makes
+									Trapmine falsely flag the file as "malicious".
+								</p>
+							</div>
+							<div class="spacer"></div>
+							<div class="box">
+								<h3>How do I use the aim assist feature?</h3>
+								<p>
+									You can press A to toggle the aim assist (aka aimbot) on or
+									off.
+								</p>
+							</div>
+							<div class="box">
+								<h3>How can I help?</h3>
+								<p>
+									Join the
+									<a
+										href="https://discord.gg/vQnrUVxAvT"
+										class="underline-center"
+										>Discord server</a
+									>
+									to recieve updates regarding the client. You can contribute by
+									suggesting ideas and features that you want in the client. If
+									you have a good knowledge of NodeJS and ElectronJS, you can
+									also ask to help with the development of the client.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div class="column">
+					<h1 class="text-center" style="margin: 25px 0px 10px 0px">
+						Get it now
+					</h1>
+					<button id="bottom-download" class="download center">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							fill="currentColor"
+							class="bi bi-cloud-download"
+							viewBox="0 0 16 16"
+						>
+							<path
+								d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"
+							/>
+							<path
+								d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"
+							/>
+						</svg>
+						<div class="spacer"></div>
+						<span> Download </span>
+					</button>
+					<div id="pre-download" style="opacity: 1">
+						<p class="text-center" id="download-text">
+							Install the client now with an easy one-click installer
+						</p>
+					</div>
+					<div id="post-download" style="opacity: 0; display: none">
+						<p class="text-center" id="download-text">
+							Thank you for downloading. The download should initiate
+							momentarily. If not, click
+							<a href="#" class="underline-center" id="redownload-link">here</a>
+						</p>
+						<button class="discord center">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="16"
+								height="16"
+								fill="currentColor"
+								class="bi bi-cloud-download"
+								viewBox="0 0 16 16"
+							>
+								<path
+									d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"
+								/>
+							</svg>
+							<div class="spacer"></div>
+							<span> Join the Discord server </span>
+						</button>
+					</div>
+				</div>
+				<hr />
+				<a
+					draggable="false"
+					style="
+						display: flex;
+						align-items: center;
+						width: fit-content;
+						margin: 0px auto;
+					"
+					href="https://docs-blockyfish.netlify.app"
+					class="social"
+					target="_blank"
+				>
+					<h3 class="text-center">Documentations</h3>
+					<div class="spacer"></div>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="16"
+						height="16"
+						fill="currentColor"
+						class="bi bi-box-arrow-up-right"
+						viewBox="0 0 16 16"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+						/>
+						<path
+							fill-rule="evenodd"
+							d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
+						/>
+					</svg>
+				</a>
+				<a
+					draggable="false"
+					style="
+						display: flex;
+						align-items: center;
+						width: fit-content;
+						margin: 0px auto;
+					"
+					href="https://docs-blockyfish.netlify.app/changelog"
+					class="social"
+					target="_blank"
+				>
+					<h3 class="text-center">Changelogs</h3>
+					<div class="spacer"></div>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="16"
+						height="16"
+						fill="currentColor"
+						class="bi bi-box-arrow-up-right"
+						viewBox="0 0 16 16"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+						/>
+						<path
+							fill-rule="evenodd"
+							d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
+						/>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div id="footer">
+			<div style="position: fixed; left: 15px">
+				<p style="margin: 0px">blockyfish client</p>
+			</div>
+			<a
+				draggable="false"
+				href="https://discord.gg/vQnrUVxAvT"
+				target="_blank"
+				class="social"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="20"
+					height="20"
+					fill="currentColor"
+					class="bi bi-discord"
+					viewBox="0 0 16 16"
+				>
+					<path
+						d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"
+					/>
+				</svg>
+			</a>
+			<div class="spacer"></div>
+			<a
+				draggable="false"
+				href="https://github.com/blockyfish-client/Desktop-Client"
+				target="_blank"
+				class="social"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="20"
+					height="20"
+					fill="currentColor"
+					class="bi bi-github"
+					viewBox="0 0 16 16"
+				>
+					<path
+						d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+					/>
+				</svg>
+			</a>
+			<div class="spacer"></div>
+			<p style="margin-right: 20px">Made by pi</p>
+		</div>
+	</div>
+	<script src="index.js"></script>
+	<script src="image-carousel.js"></script>
 </body>

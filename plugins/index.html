@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8" />
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+	/>
+	<title>Blockyfish Client</title>
+	<meta content="Blockyfish Client" property="og:title" />
+	<meta
+		content="Just a desktop client for deeeep.io"
+		property="og:description"
+	/>
+	<meta property="og:site_name" content="It*s ⫷Ꮆяᗩиᕲ💠ᑭî⫸" />
+	<meta property="og:image" content="../assets/icon.png" />
+	<link rel="icon" type="image/png" href="../assets/icon.png" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="cards.css" />
+	<link rel="stylesheet" href="../link.css" />
+	<script src="index.js"></script>
+</head>
+<body>
+	<div id="nav">
+		<div id="nav-content">
+			<a href="https://blockyfish.netlify.app">
+				<img
+					src="../assets/icon.png"
+					alt="Blockyfish logo"
+					width="32px"
+					height="32px"
+				/>
+			</a>
+			<div class="button-row">
+				<a href="https://blockyfish.netlify.app/plugins" class="nav-links"
+					>Plugins</a
+				>
+				<a href="https://github.com/blockyfish-client" class="nav-links"
+					>GitHub</a
+				>
+				<a href="https://discord.gg/vQnrUVxAvT" class="nav-links">Discord</a>
+			</div>
+		</div>
+	</div>
+	<div id="title-banner">
+		<h1>Blockyfish Plugins</h1>
+	</div>
+	<div id="plugin-list">
+		<div id="cards">
+			<div class="card">
+				<div class="card-content">
+					<div class="card-image">
+						<i class="fa-duotone fa-crosshairs"></i>
+					</div>
+					<div class="card-info-wrapper">
+						<div class="card-info">
+							<i class="fa-duotone fa-crosshairs"></i>
+							<div class="card-info-title">
+								<h3>Aim assist</h3>
+								<h4>
+									Allows any animal to have mahi mahi's target locking ability.
+									Press A to lock on to a target.
+								</h4>
+							</div>
+						</div>
+						<button
+							class="download"
+							onclick="download('files/aimbotAssist.js')"
+						>
+							<i class="fa-duotone fa-arrow-down-to-line"></i>
+							Download
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-content">
+					<div class="card-image">
+						<i class="fa-duotone fa-arrows-spin"></i>
+					</div>
+					<div class="card-info-wrapper">
+						<div class="card-info">
+							<i class="fa-duotone fa-arrows-spin"></i>
+							<div class="card-info-title">
+								<h3>Auto spin</h3>
+								<h4>
+									Spin really fast without breaking your arms. Hold Z to
+									activate.
+								</h4>
+							</div>
+						</div>
+						<button class="download" onclick="download('files/autoSpin.js')">
+							<i class="fa-duotone fa-arrow-down-to-line"></i>
+							Download
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-content">
+					<div class="card-image">
+						<i class="fa-duotone fa-eye-low-vision"></i>
+					</div>
+					<div class="card-info-wrapper">
+						<div class="card-info">
+							<i class="fa-duotone fa-eye-low-vision"></i>
+							<div class="card-info-title">
+								<h3>Better vision</h3>
+								<h4>Removes flashbangs, ink, and darkness.</h4>
+							</div>
+						</div>
+						<button
+							class="download"
+							onclick="download('files/noFlashbangsInkDarkness.js.js')"
+						>
+							<i class="fa-duotone fa-arrow-down-to-line"></i>
+							Download
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-content">
+					<div class="card-image">
+						<i class="fa-duotone fa-radar"></i>
+					</div>
+					<div class="card-info-wrapper">
+						<div class="card-info">
+							<i class="fa-duotone fa-radar"></i>
+							<div class="card-info-title">
+								<h3>Anti-stealth</h3>
+								<h4>
+									No more low opacity or invisible animals. Also allows you to
+									see animals that are hiding in props.
+								</h4>
+							</div>
+						</div>
+						<button
+							class="download"
+							onclick="download('files/noInvisibleAnimals.js')"
+						>
+							<i class="fa-duotone fa-arrow-down-to-line"></i>
+							Download
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-content">
+					<div class="card-image">
+						<i class="fa-duotone fa-magnifying-glass-minus"></i>
+					</div>
+					<div class="card-info-wrapper">
+						<div class="card-info">
+							<i class="fa-duotone fa-magnifying-glass-minus"></i>
+							<div class="card-info-title">
+								<h3>No zoom limit</h3>
+								<h4>
+									Zoom clamp is removed. You can zoom in or out as far as you
+									want.
+								</h4>
+							</div>
+						</div>
+						<button class="download" onclick="download('files/noZoomLimit.js')">
+							<i class="fa-duotone fa-arrow-down-to-line"></i>
+							Download
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-content">
+					<div class="card-image">
+						<i class="fa-duotone fa-ghost"></i>
+					</div>
+					<div class="card-info-wrapper">
+						<div class="card-info">
+							<i class="fa-duotone fa-ghost"></i>
+							<div class="card-info-title">
+								<h3>I see dead fish</h3>
+								<h4>
+									Show all ghosts. Saying "I see dead fish" no longer works.
+								</h4>
+							</div>
+						</div>
+						<button class="download" onclick="download('files/showGhosts.js')">
+							<i class="fa-duotone fa-arrow-down-to-line"></i>
+							Download
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-content">
+					<div class="card-image">
+						<i class="fa-duotone fa-slash-forward"></i>
+					</div>
+					<div class="card-info-wrapper">
+						<div class="card-info">
+							<i class="fa-duotone fa-slash-forward"></i>
+							<div class="card-info-title">
+								<h3>Slash command revival</h3>
+								<h4>
+									Brings back /mute and /unmute. Also adds /settarget for
+									multiboxing.
+								</h4>
+							</div>
+						</div>
+						<button
+							class="download"
+							onclick="download('files/slashCommands.js')"
+						>
+							<i class="fa-duotone fa-arrow-down-to-line"></i>
+							Download
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-content">
+					<div class="card-image">
+						<i class="fa-duotone fa-x-ray"></i>
+					</div>
+					<div class="card-info-wrapper">
+						<div class="card-info">
+							<i class="fa-duotone fa-x-ray"></i>
+							<div class="card-info-title">
+								<h3>X-ray vision</h3>
+								<h4>See through terrain and ceilings.</h4>
+							</div>
+						</div>
+						<button class="download" onclick="download('files/xrayTerrain.js')">
+							<i class="fa-duotone fa-arrow-down-to-line"></i>
+							Download
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="cards.js"></script>
+	<script src="https://kit.fontawesome.com/944eb371a4.js"></script>
+</body>

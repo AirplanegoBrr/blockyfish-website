@@ -1,0 +1,119 @@
+@font-face {
+	font-family: "Quicksand";
+	font-style: normal;
+	font-weight: 400;
+	src: local(""),
+		url("../fonts/quicksand-v22-latin-regular.woff2") format("woff2"),
+		url("../fonts/quicksand-v22-latin-regular.woff") format("woff");
+}
+@font-face {
+	font-family: "Twemoji";
+	src: url(https://xem.github.io/unicode13/Twemoji.ttf);
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+	scrollbar-width: 10px;
+	scrollbar-color: #9ea5ac;
+}
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 5px;
+}
+*::-webkit-scrollbar:hover {
+	width: 10px;
+}
+*::-webkit-scrollbar-track {
+	background: #0000;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: #9ea5ac;
+	border-radius: 10px;
+}
+
+body {
+	font-family: "Quicksand", "Twemoji";
+	margin: 0px;
+	background-color: #212323;
+}
+
+#title-banner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 50px;
+}
+
+button.download {
+	font-size: 14px;
+	border-radius: 3px;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	transition: 150ms ease background, 150ms ease box-shadow, 150ms ease color,
+		150ms ease border;
+	cursor: pointer;
+	padding: 8px 12px;
+	user-select: none;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	background-color: #3a71c1;
+	color: #fff;
+	font-family: Quicksand;
+	margin: 15px 0px 10px 25px;
+}
+button.download:hover {
+	background-color: #2f5b9d;
+}
+button.download i {
+	margin-right: 10px;
+}
+
+.nav-links {
+	background: none;
+	color: #ccc;
+	transition: all 0.3s;
+	font-size: 16px;
+	border-radius: 3px;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	transition: 150ms ease background, 150ms ease box-shadow, 150ms ease color,
+		150ms ease border;
+	cursor: pointer;
+	padding: 8px 12px;
+	user-select: none;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-family: Quicksand;
+}
+.nav-links:hover {
+	color: #fff;
+}
+
+#nav {
+	background-color: #182020;
+	top: 0;
+	position: sticky;
+	z-index: 99999;
+}
+#nav-content {
+	margin: auto;
+	padding: 10px;
+	width: 90vw;
+	max-width: 900px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.button-row {
+	display: flex;
+	flex-direction: row;
+}
