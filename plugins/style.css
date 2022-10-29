@@ -36,6 +36,7 @@ body {
 	font-family: "Quicksand", "Twemoji";
 	margin: 0px;
 	background-color: #212323;
+	overflow-x: hidden;
 }
 
 img {
@@ -146,7 +147,8 @@ button.download i {
 	outline: none;
 	border: none;
 	color: #fff;
-	min-width: 200px;
+	width: 200px;
+	max-width: 30vw;
 	font-family: Quicksand;
 	font-size: 16px;
 }
