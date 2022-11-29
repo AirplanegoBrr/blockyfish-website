@@ -65,11 +65,7 @@ async function startDownload() {
 	if (navigator.appVersion.indexOf("Mac") != -1) Name = "mac";
 	if (navigator.appVersion.indexOf("X11") != -1) Name = "x11";
 	if (navigator.appVersion.indexOf("Linux") != -1) Name = "linux";
-	let t = await (
-		await fetch(
-			"https://api.github.com/repos/blockyfish-client/desktop-client/releases/latest"
-		)
-	).json();
+	let t = await (await fetch("https://api.github.com/repos/blockyfish-client/desktop-client/releases/latest")).json();
 	for (let i = 0; i < t.assets.length; i++) {
 		if (matches(t.assets[i].name, Name)) {
 			download(t.assets[i].browser_download_url);
@@ -89,10 +85,7 @@ async function startDownload() {
 }
 for (const download_button of download_buttons) {
 	download_button.addEventListener("click", async (e) => {
-		if (
-			navigator.userAgent.indexOf("Win") != -1 ||
-			navigator.userAgent.indexOf("Linux") != -1
-		) {
+		if (navigator.userAgent.indexOf("Win") != -1 || navigator.userAgent.indexOf("Linux") != -1) {
 			startDownload();
 		} else {
 			modal.style.opacity = "1";
@@ -124,23 +117,12 @@ modal_proceed.addEventListener("click", () => {
 
 //download count fetcher
 async function getDownloadCount() {
-	let json_data = await (
-		await fetch(
-			"https://api.github.com/repos/blockyfish-client/desktop-client/releases/latest"
-		)
-	).json();
+	let json_data = await (await fetch("https://api.github.com/repos/blockyfish-client/desktop-client/releases/latest")).json();
 	const download_count = document.getElementById("download-count");
-	Name = "unknown";
-	if (navigator.appVersion.indexOf("Win") != -1) Name = "win";
-	if (navigator.appVersion.indexOf("Mac") != -1) Name = "mac";
-	if (navigator.appVersion.indexOf("X11") != -1) Name = "x11";
-	if (navigator.appVersion.indexOf("Linux") != -1) Name = "linux";
+	Name = "win";
 	for (let i = 0; i < json_data.assets.length; i++) {
 		if (matches(json_data.assets[i].name, Name)) {
-			download_count.innerText =
-				json_data.assets[i].download_count +
-				" downloads for " +
-				json_data.tag_name;
+			download_count.innerText = json_data.assets[i].download_count + " downloads for " + json_data.tag_name;
 		}
 	}
 }
